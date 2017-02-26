@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Songs index</title>
+  </head>
+  <body>
+
+    <% Song.all.each do |song| %>
+      ID: <%= song.id %><br>
+      Name: <%= song.name %><br>
+      Link: <a href=<%= "/songs/#{song.slug}" %>>link text</a>
+    <% end %>
+
+  </body>
+</html>

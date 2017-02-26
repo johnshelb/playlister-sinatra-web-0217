@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>artists index</title>
+  </head>
+  <body>
+
+    <% Artist.all.each do |artist| %>
+      ID: <%= artist.id %><br>
+      Name: <%= artist.name %><br>
+      Link: <a href=<%= "/artists/#{artist.slug}" %>>link text</a>
+    <% end %>
+
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>genres index</title>
+  </head>
+  <body>
+
+    <% Genre.all.each do |genre| %>
+      ID: <%= genre.id %><br>
+      Name: <%= genre.name %><br>
+      Link: <a href=<%= "/genres/#{genre.slug}" %>>link text</a>
+    <% end %>
+
+  </body>
+</html>
